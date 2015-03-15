@@ -4,7 +4,33 @@ import java.io.*;
 public class P493A {
 
 	private static void solve() {
-
+		String h = next();
+		String a = next();
+		int n = nextInt();
+		int[] hstatus = new int[100];
+		int[] astatus = new int[100];
+		for (int i = 0; i < n; i++) {
+			int t = nextInt();
+			String team = next();
+			int p = nextInt();
+			String c = next();
+			if (team.equals("h")) {
+				if (hstatus[p] < 2) {
+					hstatus[p] += (c.equals("y") ? 1 : 2);
+					if (hstatus[p] >= 2) {
+						System.out.println(h + " " + p + " " + t);
+					}
+				}
+			}
+			else {
+				if (astatus[p] < 2) {
+					astatus[p] += (c.equals("y") ? 1 : 2);
+					if (astatus[p] >= 2) {
+						System.out.println(a + " " + p + " " + t);
+					}
+				}
+			}
+		}
 	}
 
 	private static void run() {

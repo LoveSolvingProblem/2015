@@ -4,7 +4,14 @@ import java.io.*;
 public class P493D {
 
 	private static void solve() {
-
+		int n = nextInt();
+		if (n % 2 == 0) {
+			System.out.println("white");
+			System.out.println("1 2");
+		}
+		else {
+			System.out.println("black");
+		}
 	}
 
 	private static void run() {
